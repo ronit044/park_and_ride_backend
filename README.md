@@ -7,8 +7,6 @@ This is the backend for the Park and Ride system, which allows users to book par
 - Node.js
 - Express.js
 - MongoDB (with Mongoose ODM)
-- Firebase Authentication (for user auth)
-- Swagger (for API documentation)
 - Security Libraries: Helmet, CORS, XSS-Clean, Express Rate Limit
 
 ## Setup Instructions
