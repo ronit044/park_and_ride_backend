@@ -43,7 +43,7 @@ This is the backend for the Park and Ride system, which allows users to book par
 ### Authentication Routes
 | Method | Endpoint       | Description          | Body Params |
 |--------|---------------|----------------------|-------------|
-| POST   | /api/auth/signup | Register a new user | `{ email, password }` |
+| POST   | /api/auth/signup | Register a new user | `{ fullName, email, password, Mobile }` |
 | POST   | /api/auth/login  | Login an existing user | `{ email, password }` |
 
 ### Parking Routes
