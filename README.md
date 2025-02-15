@@ -1,9 +1,7 @@
 # Park and Ride Backend
 
-### 🏠 Home Page
 ![DFD](assets/dfd.png)
 
-### ✅ Booking Success
 ![Modals](assets/modals.png)
 
 
