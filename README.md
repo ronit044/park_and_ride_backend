@@ -1,5 +1,12 @@
 # Park and Ride Backend
 
+### 🏠 Home Page
+![DFD](assets/dfd.png)
+
+### ✅ Booking Success
+![Modals](assets/modals.png)
+
+
 ## Overview
 This is the backend for the Park and Ride system, which allows users to book parking spaces, manage reservations, and authenticate securely.
 
@@ -59,5 +66,3 @@ This is the backend for the Park and Ride system, which allows users to book par
 
 ## License
 This project is licensed under the MIT License.
-
-EOF
