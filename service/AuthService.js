@@ -40,7 +40,7 @@ const loginUser = async (userData) => {
     }
 
     const token = user.createJWT();
-
+    console.log(token);
     return authResponse(user.name,user.email,user.mobile,token);
 };
 

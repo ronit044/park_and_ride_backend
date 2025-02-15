@@ -3,8 +3,6 @@ const jwt = require("jsonwebtoken");
 const { UnauthenticatedError } = require("../errors/index");
 
 const auth = (req, res, next) => {
-    //check header
-
     const authHeader = req.headers.authorization;
 
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -15,7 +13,7 @@ const auth = (req, res, next) => {
 
     try {
         const payload = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = {
+        req.body = {...req.body,
             userId: payload.userId,
             name: payload.name,
         };

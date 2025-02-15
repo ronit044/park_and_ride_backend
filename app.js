@@ -1,7 +1,6 @@
-//version change
 require("dotenv").config();
 require("express-async-errors");
-
+require("./cron")
 const swagger = require("./swagger.json");
 
 //extra security packages
@@ -16,10 +15,10 @@ const app = express();
 const connectDB = require("./db/connect");
 
 const authRouter = require("./routes/auth");
+const parkingRouter = require("./routes/parking");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
-// extra packages
 app.set("trust proxy", 1);
 app.use(
     rateLimiter({
@@ -33,15 +32,12 @@ app.use(cors());
 app.use(xss());
 
 app.get("/", (req, res) => {
-    res.status(200).send(`<h1>Welcome To skillstream</h1>`);
+    res.status(200).send(`started`);
 });
 
-app.get("/swagger.json", (req, res) => {
-    res.status(200).json(swagger);
-});
-
-// routes
 app.use("/api/auth", authRouter);
+app.use("/api", parkingRouter);
+
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
